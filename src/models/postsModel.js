@@ -1,6 +1,6 @@
-import conectarAoBanco from "../config/dbConfig.js";
+import dbConect from "../config/dbConfig.js";
 
-const conn = await conectarAoBanco(process.env.STRING_CONEXAO);
+const conn = await dbConect(process.env.CONECTION_STRING);
 
 export async function getPosts() {
     const db = conn.db("imersao-instabite");
