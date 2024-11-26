@@ -7,3 +7,9 @@ export async function getPosts() {
     const collection = db.collection("posts");
     return collection.find().toArray();
 };
+
+export async function post(newPost){
+    const db = conn.db("imersao-instabite");
+    const collection = db.collection("posts");
+    return collection.insertOne(newPost);
+};
